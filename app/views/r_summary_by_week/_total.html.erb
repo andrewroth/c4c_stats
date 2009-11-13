@@ -1,0 +1,171 @@
+<table class="t1">
+    <tr>
+        <td class="t2">
+        </td>
+        <td>
+            <span class="title1">Ontario and Atlantic</span>
+        </td>
+        <td>
+            <span class="title1">West</span>
+        </td>
+        <td>
+            <span class="title1">Quebec</span>
+        </td>
+        <td>
+            <span class="title1">National Total</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Spiritual Conversations by Staff
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconv_month(@monthID,oa_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconv_month(@monthID,west_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconv_month(@monthID,quebec_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconv_month(@monthID,national_region) %>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Spiritual Conversations by Students
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconvstd_month(@monthID,oa_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconvstd_month(@monthID,west_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconvstd_month(@monthID,quebec_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconvstd_month(@monthID,national_region) %>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Gospel Presentations by Staff
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospres_month(@monthID,oa_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospres_month(@monthID,west_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospres_month(@monthID,quebec_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospres_month(@monthID,national_region) %>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Gospel Presentations by Students
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospresstd_month(@monthID,oa_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospresstd_month(@monthID,west_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospresstd_month(@monthID,quebec_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospresstd_month(@monthID,national_region) %>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Holy Spirit Presentations by Staff
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_hspres_month(@monthID,oa_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_hspres_month(@monthID,west_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_hspres_month(@monthID,quebec_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsWeeklyreport.find_total_hspres_month(@monthID,national_region) %>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <br/>
+            Indicated Decisions
+        </td>
+        <% start_date = CimStatsMonth.find_start_date(@monthID) %>
+        <% end_date = CimStatsMonth.find_end_date(@monthID) %>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsPrc.count_by_date(start_date,end_date,oa_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsPrc.count_by_date(start_date,end_date,west_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsPrc.count_by_date(start_date,end_date,quebec_region) %>
+            </center>
+        </td>
+        <td>
+            <center>
+                <%= sprintf "%s", CimStatsPrc.count_by_date(start_date,end_date,national_region) %>
+            </center>
+        </td>
+    </tr>
+</table>

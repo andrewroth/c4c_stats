@@ -1,0 +1,2 @@
+module RSummaryByMonthHelper
+end

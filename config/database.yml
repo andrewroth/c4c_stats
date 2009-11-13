@@ -1,0 +1,6 @@
+development:
+  username: root
+  database: cim_dev
+  password: mapleleafs123
+  host: localhost
+  adapter: mysql

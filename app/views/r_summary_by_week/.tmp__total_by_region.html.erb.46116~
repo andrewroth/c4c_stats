@@ -1,0 +1,133 @@
+<center>
+    <p>
+        <span class="title1">Total Stats by Week</span>
+    </p>
+    <p>
+    <table class="t1">
+        <tr>
+            <td style='border: 1px solid #FFFFFF;'>
+            </td>
+            <% if !@weeks.nil? %>
+            <% i = 1 %>
+            <% @weeks.each do -%>
+            <td>
+                <span class="title1"><%= sprintf "Week %s", i %>
+                </span>
+            </td>
+            <% i+= 1 %>
+            <% end %>
+            <% end %>
+        </tr>
+        <tr>
+            <td>
+                Spiritual Conversations by Staff
+            </td>
+            <% if !@weeks.nil? %>
+            <% @weeks.each do |week| -%>
+            <td>
+                <center>
+                    <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconv_week(week.week_id,4) %>
+                </center>
+            </td>
+            <% end %>
+            <% end %>
+        </tr>
+        <tr>
+            <td>
+                Spiritual Conversations by Students
+            </td>
+            <% if !@weeks.nil? %>
+            <% @weeks.each do |week| -%>
+            <td>
+                <center>
+                    <%= sprintf "%s", CimStatsWeeklyreport.find_total_spconvstd_week(week.week_id,4) %>
+                </center>
+            </td>
+            <% end %>
+            <% end %>
+        </tr>
+        <tr>
+            <td>
+                Gospel Presentations by Staff
+            </td>
+            <% if !@weeks.nil? %>
+            <% @weeks.each do |week| -%>
+            <td>
+                <center>
+                    <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospres_week(week.week_id,4) %>
+                </center>
+            </td>
+            <% end %>
+            <% end %>
+        </tr>
+        <tr>
+            <td>
+                Gospel Presentations by Students
+            </td>
+            <% if !@weeks.nil? %>
+            <% @weeks.each do |week| -%>
+            <td>
+                <center>
+                    <%= sprintf "%s", CimStatsWeeklyreport.find_total_gospresstd_week(week.week_id,4) %>
+                </center>
+            </td>
+            <% end %>
+            <% end %>
+        </tr>
+        <tr>
+            <td>
+                Holy Spirit Presentations by Staff
+            </td>
+            <% if !@weeks.nil? %>
+            <% @weeks.each do |week| -%>
+            <td>
+                <center>
+                    <%= sprintf "%s", CimStatsWeeklyreport.find_total_hspres_week(week.week_id,4) %>
+                </center>
+            </td>
+            <% end %>
+            <% end %>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <center>
+                </center>
+            </td>
+            <td>
+                <center>
+                </center>
+            </td>
+            <td>
+                <center>
+                </center>
+            </td>
+            <td>
+                <center>
+                </center>
+            </td>
+            <td>
+                <center>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Indicated Decisions
+            </td>
+            <% if !@weeks.nil? %>
+            <% @weeks.each do |week| -%>
+            <% start_date = CimStatsWeek.find_start_date(week.week_id) %>
+            <% end_date = CimStatsWeek.find_end_date(week.week_id) %>
+            <td>
+                <center>
+                    <%= sprintf "%s", CimStatsPrc.count_by_date(start_date,end_date,4) %>
+                </center>
+            </td>
+            <% end %>
+            <% end %>
+        </tr>
+    </table>
+</center>
+</p>

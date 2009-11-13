@@ -1,0 +1,2 @@
+module CSemesterAtAGlanceHelper
+end

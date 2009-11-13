@@ -1,0 +1,2 @@
+module RSummaryByWeekHelper
+end

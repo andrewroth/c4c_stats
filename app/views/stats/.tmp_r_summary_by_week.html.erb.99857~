@@ -1,0 +1,24 @@
+<p>
+    <span class="heading">Summary by Week</span>
+</p>
+    <% form_for :month, :url => { :action => :save_order } do |form| %>
+    <fieldset>
+        <legend>
+            Please Select a Month
+        </legend>
+        <div>
+            <%= form.label :month, "Month:" %>
+            <%=
+            form.select :month,
+            Month::months,
+            :prompt => "Select a payment method" %>
+        </div>
+        <%= submit_tag "Place Order" , :class => "submit" %>
+    </fieldset>
+    <% end %>
+</div>
+
+</p>
+<p>
+    <span class="text"><a href="/stats">Go Back</a></span>	
+</p>

@@ -1,0 +1,206 @@
+.navbar {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: normal;
+    text-align: right;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+.text {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+.smallText {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+.smallBold {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+}
+
+.bold {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.notice {
+    color: #FF6633;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.date {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-style: italic;
+    font-variant: normal;
+}
+
+.example {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-style: italic;
+    font-variant: normal;
+}
+
+.heading {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: lighter;
+}
+
+.title1 {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+	font-style: normal;
+    font-weight: bold;
+	text-align: center;
+}
+
+.heading2 {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.heading3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.category {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.modify {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+}
+
+.pageTitle {
+    color: #FFFFFF;
+    font-family: Eurostile, Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.error {
+    color: #FF0000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.summary {
+    color: #003366;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.footer {
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.badgeFirstName {
+    font-size: xx-large;
+}
+
+.badgeLastName {
+    font-size: x-large;
+}
+
+a.info {
+    background-color: #CCCCCC;
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding: 2px;
+    position: relative;
+    text-decoration: none;
+    z-index: 24;
+}
+
+a.info:hover {
+    background-color: white;
+    z-index: 25;
+}
+
+a.info span {
+    display: none;
+}
+
+a.info:hover span {
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;
+    display: block;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    font-weight: normal;
+    left: 5px;
+    padding: 4px;
+    position: absolute;
+    text-align: left;
+    top: 20px;
+    width: 20em;
+    z-index: 30;
+}
+
+table.t1 {
+	border: 1px #000000 solid;
+	padding: 5px;
+}
+
+td.t2 {
+	border: 1px solid #FFFFFF;
+}
+
+overdiv {
+    background-color: #71F4FF;
+}
+
+p {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+	}

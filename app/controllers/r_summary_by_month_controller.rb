@@ -1,4 +1,5 @@
 class RSummaryByMonthController < ApplicationController
+ 
   def index
     if params[:semester].nil?
       @semesterID = nil
@@ -9,5 +10,5 @@ class RSummaryByMonthController < ApplicationController
     end
     @semesters = CimStatsSemester.all.collect{ |s| [s.semester_desc]} 
   end
-
+  
 end

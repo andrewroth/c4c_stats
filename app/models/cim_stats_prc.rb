@@ -1,5 +1,6 @@
 class CimStatsPrc < ActiveRecord::Base
   
+  set_primary_key :prc_id
   set_table_name :cim_stats_prc
   
   def self.count_by_date(start_date,end_date,region_id)

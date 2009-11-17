@@ -1,0 +1,573 @@
+<html>
+    <head>
+        <title></title>
+        <%= stylesheet_link_tag "stats" , :media => "all" %>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+            // The following variable is used in the milonic menu scripts to properly
+            // find the path to the other menu scripts to include.
+            aiPathToRoot = '';
+        </script>
+        <link href="Data/css/site.css" rel="stylesheet" type="text/css">
+        <script language="JavaScript" src="Data/scripts/JScript/GoogleAnalytics1.js" type="text/javascript">
+        </script>
+        <script language="JavaScript" src="Data/scripts/JScript/GoogleAnalytics2.js" type="text/javascript">
+        </script>
+        <script language="JavaScript" src="Data/scripts/JScript/milonic_src.jsp" type="text/javascript">
+        </script>
+        <script language="JavaScript" src="Data/scripts/JScript/menu_data.jsp" type="text/javascript">
+        </script>
+        <script language="JavaScript" src="Data/scripts/JScript/MM_swapImage.jsp" type="text/javascript">
+        </script>
+        <script language="JavaScript" src="Data/scripts/JScript/MM_preloadImages.jsp" type="text/javascript">
+        </script>
+        <script language="JavaScript" src="Data/scripts/JScript/MM_findObj.jsp" type="text/javascript">
+        </script>
+    </head>
+    <body onLoad="MM_preloadImages('https://intranet.campusforchrist.org/Images/chinese-on.jpg','https://intranet.campusforchrist.org/Images/korean-on.jpg','https://intranet.campusforchrist.org/Images/english-on.jpg');" bgcolor="#FFFFFF" text="#000000" link="#003366" vlink="#003366" alink="#CCCCCC" leftmargin="3" topmargin="8" bottommargin="8" marginwidth="0" marginheight="0" ID="Bdy">
+        <table width="751" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <reportdata>
+                        <!--googleoff: all-->
+                        <style type="text/css">@import url(https://www.mygcx.org/static/script/gcx/yui/skins/cnxbar/menu.css);
+                        </style>
+                        <script type="text/javascript" src="https://www.mygcx.org/static/script/yui/yahoo-dom-event/yahoo-dom-event.js">
+                        </script>
+                        <script type="text/javascript" src="https://www.mygcx.org/static/script/yui/animation/animation.js">
+                        </script>
+                        <script type="text/javascript" src="https://www.mygcx.org/static/script/yui/container/container_core.js">
+                        </script>
+                        <script type="text/javascript" src="https://www.mygcx.org/static/script/yui/menu/menu.js">
+                        </script>
+                        <script type="text/javascript">
+                            YAHOO.util.Event.onContentReady("ConneXionBar", function(){
+                                var CNXMenuBar = new YAHOO.widget.MenuBar("ConneXionBar", {
+                                    autosubmenudisplay: true,
+                                    hidedelay: 750,
+                                    effect: {
+                                        effect: YAHOO.widget.ContainerEffect.FADE,
+                                        duration: 0.250
+                                    }
+                                });
+                                //Fix to get the all the submenus at a z-index of 999
+                                CNXMenuBar.subscribe("render", function(p_sType, p_aArgs){
+                                    this.cfg.setProperty("zindex", 999);
+                                });
+                                CNXMenuBar.render();
+                            });
+                        </script>
+                        <div class="yui-skin-cnxbar">
+                            <div id="ConneXionBar" class="yuimenubar yuimenubarnav" style="display:none;">
+                                <div class="bd">
+                                    <ul class="first-of-type">
+                                        <li class="yuimenubaritem">
+                                            <a class="yuimenubaritemlabel" href="#">MY TOOLS</a>
+                                            <div class="yuimenu">
+                                                <div class="bd">
+                                                    <ul>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="/GPS/screen/softwareOrdering" target="_blank">Software Ordering</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/public/screen/profile">Profile</a>
+                                                        </li>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/public/screen/peopleLocator">People Locator</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="yuimenubaritem">
+                                            <a class="yuimenubaritemlabel" href="#">MY COMMUNITIES</a>
+                                            <div class="yuimenu">
+                                                <div class="bd">
+                                                    <ul>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/C4C_Ops/screen/home">C4C_Ops</a>
+                                                        </li>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_wlu/screen/home">c4c_wlu</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/public/screen/communityBrowser">Show All</a>
+                                                            <div class="yuimenu">
+                                                                <div class="bd">
+                                                                    <ul>
+                                                                        <li class="yuimenuitem">
+                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/C4C_FacebookFanPage/screen/home">C4C_FacebookFanPage</a>
+                                                                        </li>
+                                                                        <li class="yuimenuitem">
+                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/C4C_Ops/screen/home">C4C_Ops</a>
+                                                                        </li>
+                                                                        <li class="yuimenuitem">
+                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/C4C_Staff_Intranet/screen/home">C4C_Staff_Intranet</a>
+                                                                            <div class="yuimenu">
+                                                                                <div class="bd">
+                                                                                    <ul>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/Campus_Days09/screen/home">Campus_Days09</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="yuimenuitem">
+                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/C4C_Websites/screen/home">C4C_Websites</a>
+                                                                            <div class="yuimenu">
+                                                                                <div class="bd">
+                                                                                    <ul>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_brock/screen/home">c4c_brock</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_concordia/screen/home">c4c_concordia</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_cu/screen/home">c4c_cu</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_dal/screen/home">c4c_dal</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_mac/screen/home">c4c_mac</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_mcgill/screen/home">c4c_mcgill</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_montreal/screen/home">c4c_montreal</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_quebec/screen/home">c4c_quebec</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_queens/screen/home">c4c_queens</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_ryerson/screen/home">c4c_ryerson</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_seneca/screen/home">c4c_seneca</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_sfu/screen/home">c4c_sfu</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_sherbrooke/screen/home">c4c_sherbrooke</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_smu/screen/home">c4c_smu</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_ubc/screen/home">c4c_ubc</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_ul/screen/home">c4c_ul</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uofa/screen/home">c4c_uofa</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uofc/screen/home">c4c_uofc</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uofg/screen/home">c4c_uofg</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uofm/screen/home">c4c_uofm</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uofs/screen/home">c4c_uofs</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uoft/screen/home">c4c_uoft</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uottawa/screen/home">c4c_uottawa</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uvic/screen/home">c4c_uvic</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uw/screen/home">c4c_uw</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_uwo/screen/home">c4c_uwo</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_windsor/screen/home">c4c_windsor</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_wlu/screen/home">c4c_wlu</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/c4c_york/screen/home">c4c_york</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/frosh/screen/home">frosh</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="yuimenuitem">
+                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_AccelerationZone/screen/home">LooP09_AccelerationZone</a>
+                                                                            <div class="yuimenu">
+                                                                                <div class="bd">
+                                                                                    <ul>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_C4C_WebsiteRebrand/screen/home">LooP09_C4C_WebsiteRebrand</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_Fun/screen/home">LooP09_Fun</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_GraphicProjects/screen/home">LooP09_GraphicProjects</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_IntegratedPromo/screen/home">LooP09_IntegratedPromo</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_ITProjects/screen/home">LooP09_ITProjects</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_MovementTracker/screen/home">LooP09_MovementTracker</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_SoulCravings/screen/home">LooP09_SoulCravings</a>
+                                                                                        </li>
+                                                                                        <li class="yuimenuitem">
+                                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/LooP09_VideoProjects/screen/home">LooP09_VideoProjects</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="yuimenuitem">
+                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/UW_Summer_Ministry_09/screen/home">UW_Summer_Ministry_09</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/public/screen/profile?profile_combinerURL=globalProfile#FavoriteCommunities">Edit</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/public/screen/communityBrowser">Browse</a>
+                                                        </li>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="#">New</a>
+                                                            <div class="yuimenu">
+                                                                <div class="bd">
+                                                                    <ul>
+                                                                        <li class="yuimenuitem">
+                                                                            <a class="yuimenuitemlabel" href="https://www.mygcx.org/Public/screen/new_community_agreement">Community</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="yuimenubaritem" style="float:right;">
+                                            <a class="yuimenubaritemlabel" href="https://intranet.campusforchrist.org/index.php?p_Mod=Logout">LOGOUT</a>
+                                        </li>
+                                        <li class="yuimenubaritem" style="float:right;">
+                                            <a class="yuimenubaritemlabel" href="#">HELP</a>
+                                            <div class="yuimenu">
+                                                <div class="bd">
+                                                    <ul>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="/HelpCenter/screen/home">GCX HelpCenter</a>
+                                                        </li>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="http://app1.mygcx.org/gcxhelp/usersGuide/index.html">GCX User Guide</a>
+                                                        </li>
+                                                        <li class="yuimenuitem">
+                                                            <a class="yuimenuitemlabel" href="gcxFeedback">Feedback</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="yuimenubaritem" style="float:right;">
+                                            <a class="yuimenubaritemlabel" href="#">SEARCH</a>
+                                            <div class="yuimenu cnxbar-search">
+                                                <div class="bd">
+                                                    <form method="get" accept-charset="UTF-8" action="https://www.mygcx.org/public/screen/search">
+                                                        <input type="text" name="q"/><input type="submit" value="Search"/>
+                                                        <br/>
+                                                        <select name="as_oq">
+                                                            <option value="" selected="selected">All CCCI</option>
+                                                            <option value="site:www.mygcx.org">All MyGCX</option>
+                                                            <option value="site:www.mygcx.org/Public">This community</option>
+                                                        </select>
+                                                        <input type="hidden" name="site" value="default_collection"/><input type="hidden" name="oe" value="UTF-8"/><input type="hidden" name="output" value="xml_no_dtd"/><input type="hidden" name="client" value="gcx_frontend"/><input type="hidden" name="proxystylesheet" value="gcx_frontend"/>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!--googleon: all-->
+                    </reportdata>
+                </td>
+            </tr>
+        </table>
+        <table width="750" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr valign="top">
+                <td width="100%" height="118" colspan="5" valign="bottom">
+                    <div align="left">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="223450">
+                            <tr>
+                                <td width="1">
+                                    <img src="https://intranet.campusforchrist.org/Images/space.gif" width="1" height="118">
+                                </td>
+                                <td>
+                                    <table width="100%" height="118" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td width="336" background="https://intranet.campusforchrist.org/Images/CimHeader_left.jpg">
+                                                <table width="336" height="118" border="0">
+                                                    <tr valign="bottom">
+                                                        <td>
+                                                            <a href="http://www.milonic.com/"></a>
+                                                            <script>
+                                                                with (milonic = new menuname("Modules_menu")) {
+                                                                    style = menuStyle;
+                                                                    overflow = "scroll";
+                                                                    aI("text=HRDB;url=index.php?p_Mod=cim_hrdb;title=HRDB;");
+                                                                    aI("text=Registration;url=index.php?p_Mod=cim_reg;title=Registration;");
+                                                                    aI("text=Stats;url=index.php?p_Mod=cim_stats;title=Stats;");
+                                                                }
+                                                            </script>
+                                                            <script>
+                                                                with (milonic = new menuname("WebOptions_menu")) {
+                                                                    style = menuStyle;
+                                                                    overflow = "scroll";
+                                                                    aI("text=Change Password;url=index.php?p_Mod=AccountAdmin&P=EP;title=Change Password;");
+                                                                    aI("text=Home;url=index.php?p_Mod=Welcome;title=Home;");
+                                                                    aI("text=Log Out;url=index.php?p_Mod=Logout;title=Log Out;");
+                                                                }
+                                                            </script>
+                                                            <script>
+                                                                with (milonic = new menuname("Main Menu")) {
+                                                                    style = barStyle;
+                                                                    alwaysvisible = 1;
+                                                                    orientation = "horizontal";
+                                                                    overfilter = "";
+                                                                    position = "relative";
+                                                                    aI("text=Modules;showmenu=Modules_menu");
+                                                                    aI("text=Web Options;showmenu=WebOptions_menu");
+                                                                }
+                                                                
+                                                                drawMenus();
+                                                            </script>
+                                                            <div style="border: 1px solid rgb(102, 102, 102); padding: 0px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; z-index: 1000; visibility: hidden; position: absolute; top: 139px; left: 258px; width: 71px; height: 68px;" id="menu0" _f="" onselectstart="return" onmouseover="stopClose()" onmouseout="startClose()" class="mmenu">
+                                                                <a style="background: transparent none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; text-decoration: none; height: 1px; width: 1px; position: absolute; visibility: hidden;" onmouseover="return changeStatus(this._itemRef)" onmouseout="_mot=setTimeout('_mOUt(this._itemRef)',99)" onclick="return clickAction(this._itemRef)" href="#" id="mmlink0" name="mM1"/>
+                                                                    <table cellspacing="0" cellpadding="0" border="0" id="tbl0" style="padding: 0px;" class="milonictable">
+                                                                        <tbody>
+                                                                            <tr id="pTR0">
+                                                                                <td nowrap="" style="padding: 5px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; height: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" onmouseover="_popi(0)" id="el0" tabindex="0">
+                                                                                    <a style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(102, 102, 102); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk0" href="index.php?p_Mod=cim_hrdb" name="mM1">HRDB</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" id="sep0" style="padding: 0px;">
+                                                                                    <div style="padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 100%; height: 1px; font-size: 1px;"/>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr id="pTR1">
+                                                                                <td nowrap="" style="padding: 5px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; height: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" onmouseover="_popi(1)" id="el1" tabindex="1">
+                                                                                    <a style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(102, 102, 102); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk1" href="index.php?p_Mod=cim_reg" name="mM1">Registration</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" id="sep1" style="padding: 0px;">
+                                                                                    <div style="padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 100%; height: 1px; font-size: 1px;"/>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr id="pTR2">
+                                                                                <td nowrap="" style="padding: 5px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; height: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" onmouseover="_popi(2)" id="el2" tabindex="2">
+                                                                                    <a style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(102, 102, 102); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk2" href="index.php?p_Mod=cim_stats" name="mM1">Stats</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    </div>
+                                                                    <div style="border: 1px solid rgb(102, 102, 102); padding: 0px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; z-index: 1002; visibility: hidden; position: absolute; top: 139px; left: 307px; width: 99px; height: 68px;" id="menu1" _f="" onselectstart="return" onmouseover="stopClose()" onmouseout="startClose()" class="mmenu">
+                                                                        <a style="background: transparent none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; text-decoration: none; height: 22px; width: 99px; position: absolute; visibility: hidden; z-index: 1; top: 23px; left: 0px;" onmouseover="return changeStatus(this._itemRef)" onmouseout="_mot=setTimeout('_mOUt(this._itemRef)',99)" onclick="return clickAction(this._itemRef)" href="index.php?p_Mod=Welcome" id="mmlink1" name="mM1" title="Home" target=""/>
+                                                                            <table cellspacing="0" cellpadding="0" border="0" id="tbl1" style="padding: 0px;" class="milonictable">
+                                                                                <tbody>
+                                                                                    <tr id="pTR3">
+                                                                                        <td nowrap="" style="padding: 5px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; height: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" onmouseover="_popi(3)" id="el3" tabindex="3">
+                                                                                            <a style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(102, 102, 102); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk3" href="index.php?p_Mod=AccountAdmin&amp;P=EP" name="mM1">Change Password</a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" id="sep3" style="padding: 0px;">
+                                                                                            <div style="padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 100%; height: 1px; font-size: 1px;"/>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr id="pTR4">
+                                                                                        <td nowrap="" style="padding: 5px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; height: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" onmouseover="_popi(4)" id="el4" tabindex="4">
+                                                                                            <a style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(102, 102, 102); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk4" href="index.php?p_Mod=Welcome" name="mM1">Home</a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" id="sep4" style="padding: 0px;">
+                                                                                            <div style="padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; width: 100%; height: 1px; font-size: 1px;"/>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr id="pTR5">
+                                                                                        <td nowrap="" style="padding: 5px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; height: 20px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" onmouseover="_popi(5)" id="el5" tabindex="5">
+                                                                                            <a style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(102, 102, 102); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk5" href="index.php?p_Mod=Logout" name="mM1">Log Out</a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            </div>
+                                                                            <div style="padding: 0px; width: 122px; z-index: 499; visibility: visible;" id="menu2" _f="" onselectstart="return" onmouseover="stopClose()" onmouseout="startClose()" class="mmenu">
+                                                                                <a style="background: transparent none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; text-decoration: none; height: 20px; width: 48px; position: absolute; visibility: hidden; z-index: 1; top: 119px; left: 258px;" onmouseover="return changeStatus(this._itemRef)" onmouseout="_mot=setTimeout('_mOUt(this._itemRef)',99)" onclick="return clickAction(this._itemRef)" href="javascript:void(0)" id="mmlink2" name="mM1" title="" target=""/>
+                                                                                <table cellspacing="0" cellpadding="0" border="0" id="tbl2" style="padding: 0px;" class="milonictable">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td nowrap="" valign="center" style="padding: 4px; height: 20px;" onmouseover="_popi(6)" id="el6" tabindex="6">
+                                                                                                <div style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(255, 255, 255); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: bold; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk6" href="null" name="mM1" onclick="clickAction(6)">
+                                                                                                    Modules
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td style="padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; width: 1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" id="sep6">
+                                                                                            <table cellspacing="0" cellpadding="0" border="0" width="1" style="padding: 0px;" class="milonictable">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="padding: 0px;"/>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                            </td>
+                                                                                            <td nowrap="" valign="center" style="padding: 4px; height: 20px;" onmouseover="_popi(7)" id="el7" tabindex="7">
+                                                                                                <div style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; display: block; color: rgb(255, 255, 255); font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: bold; font-style: normal; font-size: 7pt; text-decoration: none;" id="lnk7" href="null" name="mM1" onclick="clickAction(7)">
+                                                                                                    Web Options
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                </td>
+                                                                <td background="https://intranet.campusforchrist.org/Images/CimHeader_center.jpg" width="*">
+                                                                </td>
+                                                                <td background="https://intranet.campusforchrist.org/Images/CimHeader_right.jpg" width="229">
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </td>
+                                                        <td width="1">
+                                                            <img height="118" width="1" src="https://intranet.campusforchrist.org/Images/space.gif"/>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td bgcolor="#223450" width="1">
+                                                <img height="1" width="1" src="https://intranet.campusforchrist.org/Images/space.gif"/>
+                                            </td>
+                                            <td width="748">
+                                                <table cellspacing="6" cellpadding="6" border="0" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <table cellspacing="0" cellpadding="10" border="0" width="730">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <p class="text">
+                                                                                    ViewerID: <b>WILL.SCHUURMAN@GMAIL.COM</b>
+                                                                                    AcessLevel: <b>National</b>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="10" width="730" valign="bottom" colspan="2">
+                                                                               
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top" colspan="2">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr valign="bottom">
+                                                                            <td height="35" width="50%">
+                                                                            </td>
+                                                                            <td width="50%">
+                                                                                <div align="right">
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td bgcolor="#223450" width="1">
+                                                <img height="1" width="1" src="https://intranet.campusforchrist.org/Images/space.gif"/>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor="#223450" valign="bottom">
+                                            <td height="25" colspan="5">
+                                                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="10%" valign="bottom">
+                                                                <img height="6" width="6" src="https://intranet.campusforchrist.org/Images/bl.jpg"/>
+                                                            </td>
+                                                            <td height="25" valign="middle">
+                                                                <table cellspacing="2" cellpadding="5" border="0" align="center" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="middle" class="footer">
+                                                                                Logged in as: 
+                                                                                WILL.SCHUURMAN@GMAIL.COM											| <a href="http://www.campusforchrist.org" class="footer">Campus for Christ</a>
+                                                                                | <a href="http://www.athletesinaction.com" class="footer">Athletes in Action</a>
+                                                                                | <a href="http://www.leaderimpactgroup.com" class="footer">LeaderImpact Group</a>
+                                                                                | <a href="http://www.powertochange.org" class="footer">P2C</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                            <td height="100%" width="10%" valign="bottom">
+                                                                <div align="right">
+                                                                    <img height="6" width="6" src="https://intranet.campusforchrist.org/Images/br.jpg"/>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    </body>

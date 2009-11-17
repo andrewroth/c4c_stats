@@ -1,6 +1,8 @@
 <p>
     <span class="heading">Summary by Month</span>
 </p>
+<div class="form1">
+	<p>
 <% form_for :semester, :url => { :action => :index } do |form| %>
 <fieldset>
     <legend>
@@ -14,16 +16,18 @@
         <%= submit_tag "Submit" , :class => "submit" %>
     </p>
 </fieldset>
+<br/>
 <% end %>
 </p>
-<div id="results"<% if @semesterID.nil? %> style="display: none"<% end %> >
-<% if !@semesterID.nil? %>
+</div>
+<div id="results"<% if @semesterID.nil? %> style="display: none"<% end %> ><% if !@semesterID.nil? %>
     <center>
     <p>
         <span class="title1">Total Stats for <%= sprintf("%s", @semesterSelected) %></span>
     </p>
     <p>
         <%= render :partial => "total" %>
+        <br/>
     </p>
     <p>
         <span class="title1">Total Stats by Month</span>
@@ -31,6 +35,7 @@
     <p>
         <% @region_id = national_region %>
         <%= render :partial => "total_by_region" %>
+        <br/>
     </p>
     <p>
         <span class="title1">Ontario and Atlantic Stats by Month</span>
@@ -38,6 +43,7 @@
     <p>
         <% @region_id = oa_region %>
         <%= render :partial => "total_by_region" %>
+        <br/>
     </p>
     <p>
         <span class="title1">West Stats by Month</span>
@@ -45,6 +51,7 @@
     <p>
         <% @region_id = west_region %>
         <%= render :partial => "total_by_region" %>
+        <br/>
     </p>
     <p>
         <span class="title1">Quebec Stats by Month</span>
@@ -52,8 +59,9 @@
     <p>
     <% @region_id = quebec_region %>
     <%= render :partial => "total_by_region" %>
+    <br/>
     </center>
-	</p>
+</p>
 <% end %>
 </div>
 <p>

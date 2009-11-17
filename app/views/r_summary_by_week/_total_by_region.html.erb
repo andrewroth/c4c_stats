@@ -19,7 +19,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeeklyreport.find_total_spconv_week(week.week_id,@region_id) %>
+        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,sp_conv) %>
         <% total += result %>
         <td>
             <center>
@@ -39,7 +39,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeeklyreport.find_total_spconvstd_week(week.week_id,@region_id) %>
+        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,sp_conv_std) %>
         <% total += result %>
         <td>
             <center>
@@ -59,7 +59,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeeklyreport.find_total_gospres_week(week.week_id,@region_id) %>
+        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,gos_pres) %>
         <% total += result %>
         <td>
             <center>
@@ -79,7 +79,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeeklyreport.find_total_gospresstd_week(week.week_id,@region_id) %>
+        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,gos_pres_std) %>
         <% total += result %>
         <td>
             <center>
@@ -99,7 +99,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeeklyreport.find_total_hspres_week(week.week_id,@region_id) %>
+        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,hs_pres) %>
         <% total += result %>
         <td>
             <center>

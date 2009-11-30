@@ -1,9 +1,34 @@
 <p>
-    <span class="heading">Indicated Decisions</span>
+    <span class="heading">Indicated Decisions Stats</span>
 </p>
+<div class="form1">
+    <p>
+        <% form_for :year, :url => { :action => :index } do |form| %>
+        <fieldset>
+            <legend>
+                <span class="title1">Please Select a Year</span>
+            </legend>
+            <p>
+                <%= form.label :year, "Year:" %>
+                <%= form.select :year, @years, :prompt => "Select Year" %>
+            </p>
+            <p>
+                <%= submit_tag "Submit" , :class => "submit" %>
+            </p>
+        </fieldset>
+        <br/>
+        <% end %>
+    </p>
+</div>
+<div id="results" align="center">
+    <p>
+        <span class="title1">Total Stats for <%= sprintf("%s", @yearSelected) %></span>
+    </p>
+    <p>
+        <%= render :partial => "total" %>
+        <br/>
+    </p>
+  </div>
 <p>
-    <span class="text">Content Will Go Here</span>
-</p>
-<p>
-    <span class="text"><a href="/stats">Go Back</a></span>	
+    <span class="text"><a href="/stats">Go Back</a></span>
 </p>

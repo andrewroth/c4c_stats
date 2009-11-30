@@ -1,3 +1,11 @@
+#gcx_bar {
+	width: 776px;
+	position: absolute;
+	top: 0px;
+	left: 12px;
+	z-index: 50;
+    background-color: #e7ee7e;	}
+
 .navbar {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 7pt;

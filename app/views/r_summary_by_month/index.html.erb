@@ -2,26 +2,25 @@
     <span class="heading">Summary by Month</span>
 </p>
 <div class="form1">
-	<p>
-<% form_for :semester, :url => { :action => :index } do |form| %>
-<fieldset>
-    <legend>
-        <span class="title1">Please Select a Semester</span>
-    </legend>
     <p>
-        <%= form.label :semester, "Semester:" %>
-        <%= form.select :semester, @semesters, :prompt => "Select Semester" %>
+        <% form_for :semester, :url => { :action => :index } do |form| %>
+        <fieldset>
+            <legend>
+                <span class="title1">Please Select a Semester</span>
+            </legend>
+            <p>
+                <%= form.label :semester, "Semester:" %>
+                <%= form.select :semester, @semesters, :prompt => "Select Semester" %>
+            </p>
+            <p>
+                <%= submit_tag "Submit" , :class => "submit" %>
+            </p>
+        </fieldset>
+        <br/>
+        <% end %>
     </p>
-    <p>
-        <%= submit_tag "Submit" , :class => "submit" %>
-    </p>
-</fieldset>
-<br/>
-<% end %>
-</p>
 </div>
-<div id="results"<% if @semesterID.nil? %> style="display: none"<% end %> ><% if !@semesterID.nil? %>
-    <center>
+<div id="results" align="center">
     <p>
         <span class="title1">Total Stats for <%= sprintf("%s", @semesterSelected) %></span>
     </p>
@@ -57,12 +56,10 @@
         <span class="title1">Quebec Stats by Month</span>
     </p>
     <p>
-    <% @region_id = quebec_region %>
-    <%= render :partial => "total_by_region" %>
-    <br/>
-    </center>
-</p>
-<% end %>
+        <% @region_id = quebec_region %>
+        <%= render :partial => "total_by_region" %>
+        <br/>
+    </p>
 </div>
 <p>
     <span class="text"><a href="/stats">Go Back</a></span>

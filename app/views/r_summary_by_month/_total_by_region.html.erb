@@ -4,7 +4,7 @@
         </td>
         <% @months.each do |month| -%>
         <td>
-            <span class="title1"><%= sprintf "%s", month.month_desc %></span>
+            <span class="title1"><%= sprintf "%s", month.description %></span>
         </td>
         <% end %>
         <td>
@@ -17,7 +17,7 @@
         </td>
         <% total = 0 %>
         <% @months.each do |month| -%>
-        <% result = CimStatsWeek.find_stats_month(month.month_id,@region_id,sp_conv) %>
+        <% result = Week.find_stats_month(month.id,@region_id,sp_conv) %>
         <% total += result %>
         <td>
             <center>
@@ -37,7 +37,7 @@
         </td>
         <% total = 0 %>
         <% @months.each do |month| -%>
-        <% result = CimStatsWeek.find_stats_month(month.month_id,@region_id,sp_conv_std) %>
+        <% result = Week.find_stats_month(month.id,@region_id,sp_conv_std) %>
         <% total += result %>
         <td>
             <center>
@@ -57,7 +57,7 @@
         </td>
         <% total = 0 %>
         <% @months.each do |month| -%>
-        <% result = CimStatsWeek.find_stats_month(month.month_id,@region_id,gos_pres) %>
+        <% result = Week.find_stats_month(month.id,@region_id,gos_pres) %>
         <% total += result %>
         <td>
             <center>
@@ -77,7 +77,7 @@
         </td>
         <% total = 0 %>
         <% @months.each do |month| -%>
-        <% result = CimStatsWeek.find_stats_month(month.month_id,@region_id,gos_pres_std) %>
+        <% result = Week.find_stats_month(month.id,@region_id,gos_pres_std) %>
         <% total += result %>
         <td>
             <center>
@@ -97,7 +97,7 @@
         </td>
         <% total = 0 %>
         <% @months.each do |month| -%>
-        <% result = CimStatsWeek.find_stats_month(month.month_id,@region_id,hs_pres) %>
+        <% result = Week.find_stats_month(month.id,@region_id,hs_pres) %>
         <% total += result %>
         <td>
             <center>
@@ -118,17 +118,19 @@
         </td>
         <% total = 0 %>
         <% @months.each do |month| -%>
-        <% start_date = CimStatsMonth.find_start_date(month.month_id) %>
-        <% end_date = CimStatsMonth.find_end_date(month.month_id) %>
-        <% result = CimStatsPrc.count_by_date(start_date,end_date,@region_id) %>
+        <% start_date = Month.find_start_date(month.id) %>
+        <% end_date = Month.find_end_date(month.id) %>
+        <% result = Prc.count_by_date(start_date,end_date,@region_id) %>
         <% total += result %>
         <td>
+            <br/>
             <center>
                 <%= sprintf "%s", result %>
             </center>
         </td>
         <% end %>
         <td>
+            <br/>
             <center>
                 <%= sprintf "%s", total %>
             </center>

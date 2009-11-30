@@ -21,22 +21,22 @@
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,oa_region,sp_conv) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,oa_region,sp_conv) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,west_region,sp_conv) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,west_region,sp_conv) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,quebec_region,sp_conv) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,quebec_region,sp_conv) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,national_region,sp_conv) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,national_region,sp_conv) %>
             </center>
         </td>
     </tr>
@@ -46,22 +46,22 @@
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,oa_region,sp_conv_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,oa_region,sp_conv_std) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,west_region,sp_conv_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,west_region,sp_conv_std) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,quebec_region,sp_conv_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,quebec_region,sp_conv_std) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,national_region,sp_conv_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,national_region,sp_conv_std) %>
             </center>
         </td>
     </tr>
@@ -71,22 +71,22 @@
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,oa_region,gos_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,oa_region,gos_pres) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,west_region,gos_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,west_region,gos_pres) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,quebec_region,gos_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,quebec_region,gos_pres) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,national_region,gos_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,national_region,gos_pres) %>
             </center>
         </td>
     </tr>
@@ -96,22 +96,22 @@
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,oa_region,gos_pres_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,oa_region,gos_pres_std) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,west_region,gos_pres_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,west_region,gos_pres_std) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,quebec_region,gos_pres_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,quebec_region,gos_pres_std) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,national_region,gos_pres_std) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,national_region,gos_pres_std) %>
             </center>
         </td>
     </tr>
@@ -121,22 +121,22 @@
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,oa_region,hs_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,oa_region,hs_pres) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,west_region,hs_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,west_region,hs_pres) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,quebec_region,hs_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,quebec_region,hs_pres) %>
             </center>
         </td>
         <td>
             <center>
-                <%= sprintf "%s", CimStatsWeek.find_stats_semester(@semesterID,national_region,hs_pres) %>
+                <%= sprintf "%s", Week.find_stats_semester(@semesterID,national_region,hs_pres) %>
             </center>
         </td>
     </tr>
@@ -146,23 +146,27 @@
             Indicated Decisions
         </td>
         <td>
+            <br/>
             <center>
-                <%= sprintf "%s", CimStatsPrc.count_by_semester(@semesterID,oa_region) %>
+                <%= sprintf "%s", Prc.count_by_semester(@semesterID,oa_region) %>
             </center>
         </td>
         <td>
+            <br/>
             <center>
-                <%= sprintf "%s", CimStatsPrc.count_by_semester(@semesterID,west_region) %>
+                <%= sprintf "%s", Prc.count_by_semester(@semesterID,west_region) %>
             </center>
         </td>
         <td>
+            <br/>
             <center>
-                <%= sprintf "%s", CimStatsPrc.count_by_semester(@semesterID,quebec_region) %>
+                <%= sprintf "%s", Prc.count_by_semester(@semesterID,quebec_region) %>
             </center>
         </td>
         <td>
+            <br/>
             <center>
-                <%= sprintf "%s", CimStatsPrc.count_by_semester(@semesterID,national_region) %>
+                <%= sprintf "%s", Prc.count_by_semester(@semesterID,national_region) %>
             </center>
         </td>
     </tr>

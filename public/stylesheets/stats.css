@@ -85,6 +85,15 @@
 	text-align: center;
 }
 
+.title2 {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+	font-style: italic;
+    font-weight: bold;
+	text-align: center;
+}
+
 .heading2 {
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;

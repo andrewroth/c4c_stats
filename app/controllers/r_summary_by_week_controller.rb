@@ -1,13 +1,17 @@
 class RSummaryByWeekController < ApplicationController
   def index
     if params[:month].nil?
-      @monthID = nil
+      @monthSelected = "#{Date::MONTHNAMES[Time.now.month()]} #{Time.now.year()}"
     else
       @monthSelected = params[:month]['month']
-      @monthID = (CimStatsMonth.find_by_month_desc @monthSelected).month_id
-      @weeks = CimStatsWeek.find(:all, :select => :week_id, :conditions => { :month_id => @monthID }, :order => :week_id)   
     end
-    @months = CimStatsMonth.all.collect{ |m| [m.month_desc]} 
+    @monthID = Month.find_month_id(@monthSelected)
+    @weeks = Week.find_weeks_in_month(@monthID)
+    
+    # the code below ensures that months that haven't occurred yet aren't listed    
+    @curMonth = "#{Date::MONTHNAMES[Time.now.month()]} #{Time.now.year()}"
+    curID = Month.find_month_id(@curMonth)
+    @months = Month.find_months(curID)
   end
   
 end

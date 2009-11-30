@@ -19,7 +19,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,sp_conv) %>
+        <% result = Week.find_stats_week(week.id,@region_id,sp_conv) %>
         <% total += result %>
         <td>
             <center>
@@ -39,7 +39,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,sp_conv_std) %>
+        <% result = Week.find_stats_week(week.id,@region_id,sp_conv_std) %>
         <% total += result %>
         <td>
             <center>
@@ -59,7 +59,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,gos_pres) %>
+        <% result = Week.find_stats_week(week.id,@region_id,gos_pres) %>
         <% total += result %>
         <td>
             <center>
@@ -79,7 +79,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,gos_pres_std) %>
+        <% result = Week.find_stats_week(week.id,@region_id,gos_pres_std) %>
         <% total += result %>
         <td>
             <center>
@@ -99,7 +99,7 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% result = CimStatsWeek.find_stats_week(week.week_id,@region_id,hs_pres) %>
+        <% result = Week.find_stats_week(week.id,@region_id,hs_pres) %>
         <% total += result %>
         <td>
             <center>
@@ -120,9 +120,9 @@
         </td>
         <% total = 0 %>
         <% @weeks.each do |week| -%>
-        <% start_date = CimStatsWeek.find_start_date(week.week_id) %>
-        <% end_date = CimStatsWeek.find_end_date(week.week_id) %>
-        <% result = CimStatsPrc.count_by_date(start_date,end_date,@region_id) %>
+        <% start_date = Week.find_start_date(week.id) %>
+        <% end_date = Week.find_end_date(week.id) %>
+        <% result = Prc.count_by_date(start_date,end_date,@region_id) %>
         <% total += result %>
         <td>
             <center>

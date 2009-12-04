@@ -9,6 +9,11 @@ tables:
   week: cim_stats_week
   weeklyreport: cim_stats_weeklyreport
   year: cim_stats_year
+  country: cim_hrdb_country
+  assignment: cim_hrdb_assignment
+  status: cim_hrdb_assignmentstatus
+  person: cim_hrdb_person
+  staff: cim_hrdb_staff
   
 # Column Mappings
 campus:
@@ -56,7 +61,7 @@ month:
   
 region:
   id: region_id
-  description: region_desc
+  description: reg_desc
   country_id: country_id
 
 weeklyreport:
@@ -84,6 +89,51 @@ week:
   end_date: week_endDate
   semester_id: semester_id
   month_id: month_id
-    
+
+country:
+  id: country_id
+  description: country_desc
+  short_description: country_shortDesc
+
+assignment:
+  id: assignment_id
+  p_id: person_id
+  campus_id: campus_id
+  status_id: assignmentstatus_id
+
+status:
+  id: assignmentstatus_id
+  description: assignmentstatus_desc
+  
+person:
+  id: person_id
+  first_name: person_fname
+  last_name: person_lname
+  legal_first_name: person_legal_fname
+  legal_last_name: person_legal_lname
+  phone: person_phone
+  email: person_email
+  address: person_addr
+  city: person_city
+  province_id: province_id
+  postal_code: person_pc
+  gender_id: gender_id
+  local_phone: person_local_phone
+  local_address: person_local_addr
+  local_city: person_local_city
+  local_postal_code: person_local_pc
+  local_province_id: person_local_province_id
+  cell_phone: cell_phone
+  local_valid_until: local_valid_until
+  title_id: title_id
+  country_id: country_id
+  local_country_id: person_local_country_id
+  middle_name: person_mname
+
+staff:
+  id: staff_id
+  person_id: person_id
+  is_active: is_active
+  
     
   

@@ -1,9 +1,38 @@
 <p>
     <span class="heading">Semester at a Glance</span>
 </p>
+<div class="form1">
+    <p>
+        <% form_for :semester, :url => { :action => :index } do |form| %>
+        <fieldset>
+            <legend>
+                <span class="title1">Please Select a Semester and Campus</span>
+            </legend>
+            <p>
+                <%= form.label :semester, "Semester:" %>
+                <%= form.select :semester, @semesters, :prompt => "Select Year", :selected => @semesterSelected %>
+            </p>
+            <p>
+                <%= form.label :campus, "Campus:" %>
+                <%= form.select :campus, @campuses, :prompt => "Select Year" %>
+            </p>
+            <p>
+                <%= submit_tag "Submit" , :class => "submit" %>
+            </p>
+        </fieldset>
+        <br/>
+        <% end %>
+    </p>
+</div>
+<div id="results" align="center"<% if @campusID.nil? %> style="display: none"<% end %> ><% if !@campusID.nil? %>
+    <p>
+    	<span class="title1">Stats for <%= @campusSelected %> staff during <%= @semesterSelected %></span>
+	<p>
+        <%= render :partial => "total" %>
+        <br/>
+    </p>
+    <% end %>
+</div>
 <p>
-    <span class="text">Content Will Go Here</span>
-</p>
-<p>
-    <span class="text"><a href="/stats">Go Back</a></span>	
+    <span class="text"><a href="/stats">Go Back</a></span>
 </p>

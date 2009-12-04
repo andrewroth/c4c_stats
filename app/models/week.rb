@@ -4,6 +4,12 @@ class Week < ActiveRecord::Base
   has_many :weekly_reports, :class_name => 'Weeklyreport', :foreign_key => _(:id)
   belongs_to :campus, :class_name => 'Campus'
   
+  def self.find_stats_staff(week_id,staff_id,stat)
+    week = find(:first, :conditions => {_(:id) => week_id})
+    result = week.weekly_reports.find(:all, :conditions => [ "#{_(:staff_id)} = ?", staff_id ])
+    result.sum(&stat)
+  end
+  
   def self.find_stats_week(week_id,region_id,stat)
     week = find(:first, :conditions => {_(:id) => week_id})
     if region_id == national_region
@@ -49,6 +55,16 @@ class Week < ActiveRecord::Base
     total
   end
   
+  def self.find_stats_semester_campus(semester_id,campus_id,stat)
+    weeks = find(:all, :conditions => {_(:semester_id) => semester_id})
+    total = 0
+    weeks.each do |week|
+      result = week.weekly_reports.find(:all, :conditions => {_(:campus_id) => campus_id})
+      total += result.sum(&stat)
+    end
+    total
+  end
+  
   def self.find_start_date(week_id)
     result = find(:first, :select => :week_endDate, :conditions => {_(:id) => (week_id-1)} )
     startdate = result['week_endDate']
@@ -63,6 +79,10 @@ class Week < ActiveRecord::Base
   
   def self.find_weeks_in_month(month_id)
     find(:all, :select => _(:id), :conditions => { _(:month_id) => month_id }, :order => _(:id))   
+  end
+  
+  def self.find_weeks_in_semester(semester_id)
+    find(:all, :conditions => { _(:semester_id) => semester_id }, :order => _(:id))   
   end
   
 end

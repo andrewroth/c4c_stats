@@ -35,7 +35,7 @@ class Month < ActiveRecord::Base
   end
   
   def self.find_months_by_semester(semester_id)
-    find(:all, :select => "#{_(:id)}, #{_(:description)}", :conditions => { _(:semester_id) => semester_id }, :order => _(:id))
+    find(:all, :conditions => { _(:semester_id) => semester_id }, :order => _(:id))
   end
   
   def self.find_months(current_id)

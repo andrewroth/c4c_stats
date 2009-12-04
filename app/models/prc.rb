@@ -28,4 +28,9 @@ class Prc < ActiveRecord::Base
     result
   end
   
+  def self.count_by_semester_and_campus(semester_id,campus_id)
+    result = self.count(:all, :joins => :campus, :conditions => ["#{Campus.table_name}.#{Campus._(:id, :campus)} = ? AND #{_(:semester_id)} = ?",campus_id,semester_id])
+    
+  end
+  
 end

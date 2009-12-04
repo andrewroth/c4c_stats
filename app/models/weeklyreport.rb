@@ -10,4 +10,12 @@ class Weeklyreport < ActiveRecord::Base
     total
   end
   
+  def self.find_staff(semester_id,campus_id)
+    find(:all, :joins => :week, :select => 'DISTINCT staff_id', :conditions => ["#{Week.table_name}.#{Week._(:semester_id, :week)} = ? AND #{_(:campus_id)} = ?", semester_id, campus_id])
+  end
+  
+  def self.check_submitted(week_id, staff_id)
+    find(:first, :conditions => {_(:week_id) => week_id, _(:staff_id) => staff_id})
+  end
+  
 end

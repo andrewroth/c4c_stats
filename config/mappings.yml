@@ -14,6 +14,7 @@ tables:
   status: cim_hrdb_assignmentstatus
   person: cim_hrdb_person
   staff: cim_hrdb_staff
+  vieweraccessgroup: accountadmin_vieweraccessgroup
   
 # Column Mappings
 campus:
@@ -40,6 +41,7 @@ prc:
   campus_id: campus_id
   notes: prc_notes
   date: prc_date
+  integrated_believer: prc_7upCompleted
   
 prcmethod:
   id: prcMethod_id
@@ -68,7 +70,7 @@ weeklyreport:
   id: weeklyReport_id
   spiritual_conversations: weeklyReport_1on1SpConv
   gospel_presentations: weeklyReport_1on1GosPres
-  holyspirt_prescentations: weeklyReport_1on1HsPres
+  holyspirit_presentations: weeklyReport_1on1HsPres
   staff_id: staff_id
   week_id: week_id
   campus_id: campus_id
@@ -135,5 +137,7 @@ staff:
   person_id: person_id
   is_active: is_active
   
-    
-  
+vieweraccessgroup:
+  id: vieweraccessgroup_id
+  viewer_id: viewer_id
+  accessgroup_id: accessgroup_id

@@ -2,51 +2,38 @@ class StatsController < ApplicationController
   
   def index
     
-  end
-  
-  def a_submit_weekly_stats
+    viewer_id = 3239#how will this be retrieved in the Pulse?
     
-  end
-  
-  def a_indicated_decisions
+    @national_access = false;
+    @regional_access = false;
+    @campusdirector_access = false;
+    #statscoordinator_access = false;
+    @allstaff_access = false;
     
-  end
-  
-  def a_semester_at_a_glance
+    accessgroup_ids = Vieweraccessgroup.find_access_ids(viewer_id)
     
-  end
-  
-  def a_year_summary
+    accessgroup_ids.each do |id|
+      id = Integer(id['accessgroup_id'])
+      puts ""
+      puts id
+      puts ""
+      if id == permission_national
+        @national_access = true;
+        @regional_access = true;
+        @campusdirector_access = true;
+        @allstaff_access = true;
+      elsif id == permission_regional
+        @regional_access = true;
+        @campusdirector_access = true;
+        @allstaff_access = true;
+      elsif id == permission_campusdirector
+        @campusdirector_access = true;
+        @allstaff_access = true;
+      elsif id == permission_allstaff
+        @allstaff_access = true;
+      end
+    end
     
-  end
-  
-  def c_semester_at_a_glance
-    
-  end
-  
-  def c_monthy_summary_by_campus
-    
-  end
-  
-  def r_summary_by_campus
-    
-  end
-  
-  def r_summary_by_month
-    
-  end
-  
-  def n_indicated_decisions
-    
-  end
-  
-  def n_hpctkc
-    
-  end
-  
-  def show_by_week
-    #@month_id = (CimStatsMonth.find_by_month_desc params[:month]).month_id
-    redirect_to :action => 'r_summary_by_week'
   end
   
 end

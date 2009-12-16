@@ -1,4 +1,13 @@
+.form2{
+	width: auto;
+}
+.form2 label{
+	width: 290px;
+}
 
+.form3 label{
+	width: 210px;
+}
 
 .form1 fieldset {
     background: #ffffff;
@@ -556,7 +565,7 @@ input:focus, textarea:focus {
 }
 
 select {
-    width: 175px;
+    width: auto;
     height: 1.5em;
 }
 

@@ -13,9 +13,9 @@ class Week < ActiveRecord::Base
   def self.find_stats_week(week_id,region_id,stat)
     week = find(:first, :conditions => {_(:id) => week_id})
     if region_id == national_region
-      result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{Campus.table_name}.#{Campus._(:region_id)} != ?", region_id ])
+      result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{__(:region_id, :campus)} != ?", region_id ])
     else
-      result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{Campus.table_name}.#{Campus._(:region_id)} = ?", region_id ])
+      result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{__(:region_id, :campus)} = ?", region_id ])
     end
     result.sum(&stat)
   end
@@ -26,12 +26,12 @@ class Week < ActiveRecord::Base
     total = 0
     if region_id == national_region
       weeks.each do |week|
-        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{Campus.table_name}.#{Campus._(:region_id)} != ?", region_id ])
+        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{__(:region_id, :campus)} != ?", region_id ])
         total += result.sum(&stat)
       end
     else
       weeks.each do |week|
-        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{Campus.table_name}.#{Campus._(:region_id)} = ?", region_id ])
+        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{__(:region_id, :campus)} = ?", region_id ])
         total += result.sum(&stat)
       end
     end
@@ -43,12 +43,12 @@ class Week < ActiveRecord::Base
     total = 0
     if region_id == national_region
       weeks.each do |week|
-        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{Campus.table_name}.#{Campus._(:region_id)} != ?", region_id ])
+        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{__(:region_id, :campus)} != ?", region_id ])
         total += result.sum(&stat)
       end
     else
       weeks.each do |week|
-        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{Campus.table_name}.#{Campus._(:region_id)} = ?", region_id ])
+        result = week.weekly_reports.find(:all, :joins => :campus, :conditions => [ "#{__(:region_id, :campus)} = ?", region_id ])
         total += result.sum(&stat)
       end
     end
@@ -65,16 +65,16 @@ class Week < ActiveRecord::Base
     total
   end
   
+  def self.find_week_id(end_date)
+    find(:first, :select => _(:id), :conditions => {_(:end_date) => end_date})["#{_(:id)}"]
+  end
+  
   def self.find_start_date(week_id)
-    result = find(:first, :select => :week_endDate, :conditions => {_(:id) => (week_id-1)} )
-    startdate = result['week_endDate']
-    startdate
+    find(:first, :select => :week_endDate, :conditions => {_(:id) => (week_id-1)} )["#{_(:end_date)}"]
   end
   
   def self.find_end_date(week_id)
-    result = find(:first, :select => :week_endDate, :conditions => {_(:id) => week_id} )
-    enddate = result['week_endDate']
-    enddate
+    find(:first, :select => :week_endDate, :conditions => {_(:id) => week_id} )["#{_(:end_date)}"]
   end
   
   def self.find_weeks_in_month(month_id)
@@ -83,6 +83,14 @@ class Week < ActiveRecord::Base
   
   def self.find_weeks_in_semester(semester_id)
     find(:all, :conditions => { _(:semester_id) => semester_id }, :order => _(:id))   
+  end
+  
+  def self.find_weeks()
+    find(:all, :select => _(:end_date), :order => _(:end_date)).collect{ |w| [w.end_date]}   
+  end
+  
+  def self.find_semester_id(id)
+    find(:first, :conditions => {_(:id) => id})["#{_(:semester_id)}"]
   end
   
 end

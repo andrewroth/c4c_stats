@@ -19,7 +19,7 @@ class Campus < ActiveRecord::Base
   end
   
   def self.find_campuses()
-    find(:all, :joins => :regions, :conditions => [ "#{Region.table_name}.#{Region._(:country_id)} = ?", 1 ], :select => _(:description), :order => _(:description)).collect{ |c| [c.description]} 
+    find(:all, :joins => :regions, :conditions => [ "#{__(:country_id, :region)} = ?", 1 ], :select => _(:description), :order => _(:description)).collect{ |c| [c.description]} 
   end
 
   def self.find_campuses_by_region(region_id)

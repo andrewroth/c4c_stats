@@ -33,3 +33,23 @@
   def hs_pres
     :weeklyReport_1on1HsPres
   end
+  
+  def permission_national
+    45
+  end
+  
+  def permission_regional
+    44
+  end
+  
+  def permission_campusdirector
+    43
+  end
+  
+  def permission_statscoordinator
+    42
+  end
+  
+  def permission_allstaff
+    41
+  end

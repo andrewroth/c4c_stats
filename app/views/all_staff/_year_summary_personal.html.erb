@@ -5,12 +5,12 @@
         <% semesters = Semester.find_semesters_by_year(@yearID) %>
         <td>
             <center>
-                <span class="bold"><%=link_to "#{semesters[0].description}", :action => "semester_at_a_glance", :year => { 'campus' => @campusSelected, 'semester' => "#{semesters[0].description}"} %></span>
+                <span class="bold"><%=link_to "#{semesters[0].description}", :action => "semester_at_a_glance", :semester => { 'campus' => @campusSelected, 'semester' => "#{semesters[0].description}"} %></span>
             </center>
         </td>
         <td>
             <center>
-                <span class="bold"><%= link_to "#{semesters[1].description}", :url => { :action => 'switch_controller' } %></span>
+                <span class="bold"><%=link_to "#{semesters[1].description}", :action => "semester_at_a_glance", :semester => { 'campus' => @campusSelected, 'semester' => "#{semesters[1].description}"} %></span>
             </center>
         </td>
         <td>

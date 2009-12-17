@@ -1,3 +1,4 @@
+# Development Database
 development:
   username: root
   database: cim_dev

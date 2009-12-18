@@ -1,6 +1,10 @@
+<!-- Title - Start-->
 <p>
     <span class="heading">Semester at a Glance</span>
 </p>
+<!-- Title - End -->
+
+<!-- Form - Start -->
 <div class="form1">
     <p>
         <% form_for :semester, :url => { :action => :semester_at_a_glance } do |form| %>
@@ -28,6 +32,9 @@
         <% end %>
     </p>
 </div>
+<!-- Form - End -->
+
+<!-- Main Content - Start -->
 <div id="results" align="center"<% if @campusID.nil? %> style="display: none"<% end %> ><% if @campusID.present? %>
     <p>
     	<span class="title1">Stats for <%= @campusSelected %> during <%= @semesterSelected %></span>
@@ -37,6 +44,8 @@
     </p>
     <% end %>
 </div>
+<!-- Main Content - End -->
+
 <p>
     <span class="text"><a href="/stats">Go Back</a></span>
 </p>

@@ -119,11 +119,23 @@ class AllStaffController < ApplicationController
     @campuses = Campus.find_campuses()
   end # end of indicated_decisions action
   
+  # delete action
+  def delete
+    puts ""
+    puts "Hello!"
+    puts ""
+      # delete the record
+      Prc.delete_by_id(params[:id])
+      @semesterSelected = params[:semesterSelected]
+      @campusSelected = params[:campusSelected]
+      # redirect to decisions action
+      redirect_to :action => 'decisions', :decisions => {"campus" => @campusSelected, "semester" => @semesterSelected}
+  end # end of delete action
+  
   # edit action
   def edit
     
-    if params[:update].present? and params[:id].nil? # check if the update params are present and the id ones aren't meaning the user wants to edit
-      
+    if params[:update].present? # check if the update params are present, then update 
       @semesterSelected = params[:update]['semester']
       @semesterID = Semester.find_semester_id(@semesterSelected)
       id = params[:update]['id']
@@ -141,6 +153,7 @@ class AllStaffController < ApplicationController
       
       # get all parameters
       method = params[:update]['method']
+      methodID = Prcmethod.find_method_id(method)
       day = params[:update]['day']
       month = params[:update]['month']
       year = params[:update]['year']
@@ -157,15 +170,7 @@ class AllStaffController < ApplicationController
       # edit the record and redirect to decisions action
       Prc.update_decision(id, @semesterID, @campusID, methodID, date, notes, name, witness, believer)    
       redirect_to :action => 'decisions', :decisions => {"campus" => @campusSelected, "semester" => @semesterSelected}
-      
-    elsif params[:id].present? and params[:delete].nil? # else if the user wants to delete
-      # delete the record
-      Prc.delete_by_id(params[:id])
-      @semesterSelected = params[:update]['semester']
-      @campusSelected = params[:update]['campus']
-      # redirect to decisions action
-      redirect_to :action => 'decisions', :decisions => {"campus" => @campusSelected, "semester" => @semesterSelected}
-      
+  
     else
       
       # Initialize Variables Used by View  
@@ -181,7 +186,7 @@ class AllStaffController < ApplicationController
       @years = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011]
       @months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
       @days = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
-     
+      
       @methods = Prcmethod.find_methods()
       @decisions = Prc.find_by_semester_and_campus(@semesterID,@campusID)
     end
@@ -231,13 +236,13 @@ class AllStaffController < ApplicationController
       Prc.submit_decision(@semesterID, @campusID, methodID, date, notes, name, witness, believer)
     end
     
-     # Initialize Variables Used by View 
-     
+    # Initialize Variables Used by View 
+    
     # arrays for date
     @years = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011]
     @months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     @days = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
-   
+    
     @methods = Prcmethod.find_methods()
     @decisions = Prc.find_by_semester_and_campus(@semesterID,@campusID)
   end # end of decisions action

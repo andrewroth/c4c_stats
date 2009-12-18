@@ -1,9 +1,11 @@
+<!-- Stats Index Page -->
 <p>
     <span class="heading">Stats</span>
 </p>
 <p>
     <span class="text">Your homepage for navigating the campus ministry stats system.</span>
 </p>
+<!-- Check all staff access level -->
 <% if @allstaff_access %>
 <span class="bold">All Staff (Personal Ministry)</span>
 <br/>
@@ -21,6 +23,7 @@
 <span class="bold">Campus Stats Coordinator</span>
 <br/>
 <br/> -->
+<!-- Check all campus director access level -->
 <% if @campusdirector_access %>
 <span class="bold">Campus Directors</span>
 <br/>
@@ -30,6 +33,7 @@
 <br/>
 <br/>
 <% end %>
+<!-- Check regional team access level -->
 <% if @regional_access %>
 <span class="bold">Regional Team</span>
 <br/>
@@ -41,6 +45,7 @@
 <br/>
 <br/>
 <% end %>
+<!-- Check national team access level -->
 <% if @national_access %>
 <span class="bold">National Team</span>
 <br/>

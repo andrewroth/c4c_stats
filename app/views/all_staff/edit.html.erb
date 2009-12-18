@@ -1,6 +1,10 @@
+<!-- Title - Start-->
 <p>
     <span class="heading">Indicated Decisions</span>
 </p>
+<!-- Title - End -->
+
+<!-- Form - Start -->
 <div class="form3">
     <p>
     <% form_for :update, :url => { :action => :edit } do |form| %>
@@ -45,15 +49,19 @@
         <p>
             <% if @delete == 0 %>
 			<%= submit_tag "Update", :class => "submit" %>
-			<% elsif @delete == 1 %>
-			<%= button_to "Delete?", :action => "edit", :id => @decision.id, :semesterSelected => @semesterSelected, :campusSelected => @campusSelected %>
+			<% end %>
+			<% end %>
+			<% if @delete == 1 %>
+			<%= button_to "Delete?", :action => "delete", :id => @decision.id, :semesterSelected => @semesterSelected, :campusSelected => @campusSelected %>
 			<% end %>
 			<%= button_to "Cancel", :action => "decisions", :decisions => {"campus" => @campusSelected, "semester" => @semesterSelected} %>
         </p>
         <br/>
-        <% end %>
     </p>
 </div>
+<!-- Form - End -->
+
+<!-- Main Content - Start -->
 <div id="results" align="center"<% if @decisions.nil? %> style="display: none"<% end %> ><% if @decisions.present? %>
     <p>
     <span class="title1">Indicated Decisions at <%= @campusSelected %>staff during <%= @semesterSelected %></span>
@@ -63,6 +71,8 @@
     </p>
     <% end %>
 </div>
+<!-- Main Content - End -->
+
 <p>
     <span class="text"><a href="/stats">Go Back</a></span>
 </p>

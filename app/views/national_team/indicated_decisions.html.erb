@@ -1,6 +1,10 @@
+<!-- Title - Start-->
 <p>
     <span class="heading">Indicated Decisions</span>
 </p>
+<!-- Title - End -->
+
+<!-- Form - Start -->
 <div class="form1">
     <p>
         <% form_for :semester, :url => { :action => :indicated_decisions } do |form| %>
@@ -20,6 +24,9 @@
         <% end %>
     </p>
 </div>
+<!-- Form - End -->
+
+<!-- Main Content - Start -->
 <div id="results" align="center">
     <p>
         <span class="title1">Indicated Decisions during <%= sprintf("%s", @semesterSelected) %></span>
@@ -29,6 +36,8 @@
         <br/>
     </p>
   </div>
+<!-- Main Content - End -->
+  
 <p>
     <span class="text"><a href="/stats">Go Back</a></span>
 </p>

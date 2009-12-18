@@ -1,6 +1,10 @@
+<!-- Title - Start-->
 <p>
     <span class="heading">Indicated Decisions</span>
 </p>
+<!-- Title - End -->
+
+<!-- Form - Start -->
 <div class="form3">
     <p>
     <% form_for :continue, :url => { :action => :decisions } do |form| %>
@@ -47,6 +51,9 @@
         <% end %>
     </p>
 </div>
+<!-- Form - End -->
+
+<!-- Main Content - Start -->
 <div id="results" align="center"<% if @decisions.nil? %> style="display: none"<% end %> ><% if @decisions.present? %>
     <p>
     	<span class="title1">Indicated Decisions at <%= @campusSelected %> staff during <%= @semesterSelected %></span>
@@ -56,6 +63,8 @@
     </p>
     <% end %>
 </div>
+<!-- Main Content - End -->
+
 <p>
     <span class="text"><a href="/stats">Go Back</a></span>
 </p>

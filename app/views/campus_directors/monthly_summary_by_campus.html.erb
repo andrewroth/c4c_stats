@@ -1,6 +1,10 @@
+<!-- Title - Start-->
 <p>
     <span class="heading">Monthly Summary by Campus</span>
 </p>
+<!-- Title - End -->
+
+<!-- Form - Start -->
 <div class="form1">
     <p>
         <% form_for :campus, :url => { :action => :monthly_summary_by_campus } do |form| %>
@@ -29,6 +33,9 @@
         <% end %>
     </p>
 </div>
+<!-- Form - End -->
+
+<!-- Main Content - Start -->
 <div id="results" align="center"<% if @monthID.nil? %> style="display: none"<% end %> ><% if !@monthID.nil? %>
     <p>
         <span class="title1">Stats for <%= sprintf("%s", @campusSelected) %> during <%= sprintf("%s", @monthSelected) %></span>
@@ -39,6 +46,8 @@
     </p>
     <% end %>
 </div>
+<!-- Main Content - End -->
+
 <p>
     <span class="text"><a href="/stats">Go Back</a></span>
 </p>
